@@ -15,6 +15,7 @@ psycopg2-binary = "^2.9.7"
 sqlalchemy = "^2.0.20"
 pydantic-extra-types = "^2.0.0"
 alembic = "^1.11.3"
+phonenumbers = "^8.13.18"
 
 
 [build-system]

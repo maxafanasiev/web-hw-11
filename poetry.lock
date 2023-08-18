@@ -302,6 +302,17 @@ files = [
 ]
 
 [[package]]
+name = "phonenumbers"
+version = "8.13.18"
+description = "Python version of Google's common library for parsing, formatting, storing and validating international phone numbers."
+optional = false
+python-versions = "*"
+files = [
+    {file = "phonenumbers-8.13.18-py2.py3-none-any.whl", hash = "sha256:3d802739a22592e4127139349937753dee9b6a20bdd5d56847cd885bdc766b1f"},
+    {file = "phonenumbers-8.13.18.tar.gz", hash = "sha256:b360c756252805d44b447b5bca6d250cf6bd6c69b6f0f4258f3bfe5ab81bef69"},
+]
+
+[[package]]
 name = "psycopg2-binary"
 version = "2.9.7"
 description = "psycopg2 - Python-PostgreSQL Database Adapter"
@@ -658,4 +669,4 @@ standard = ["colorama (>=0.4)", "httptools (>=0.5.0)", "python-dotenv (>=0.13)",
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "12a5abde25f552869b4ff5fd3b9fe18dd5df9dc2ac574bb9c70fe4bae7cb832f"
+content-hash = "2b0ea6851cca6ac1e1cc89f2d097f58238f4b311f7a5b7b03f6c9b986833623d"
