@@ -1,24 +1,15 @@
 from datetime import date
-from sqlalchemy.orm import sessionmaker, Session
-from sqlalchemy import create_engine
+
+from sqlalchemy.orm import sessionmaker
 from pydantic import BaseModel, EmailStr, field_validator
 from sqlalchemy import Column, Integer, String, TIMESTAMP
 from sqlalchemy.ext.declarative import declarative_base
 
-from phone_number import PhoneNumber
+from src.utils.phone_number import PhoneNumber
+from src.db.db_connect import engine
 
-SQLALCHEMY_DATABASE_URL = "postgresql+psycopg2://postgres:password2023@localhost:5432/fastapi"
-engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
-
-
-def get_db():
-    db = Session(engine)
-    try:
-        yield db
-    finally:
-        db.close()
 
 
 class ContactRequest(BaseModel):
